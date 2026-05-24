@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baccarat 16 Patterns Full Version</title>
+
+<style>
+:root{
+ --bg-color:#0a0a0a;
+ --panel-bg:#161616;
+ --p-color:#2196f3;
+ --b-color:#f44336;
+ --t-color:#4caf50;
+ --text-color:#ffffff;
+ --border-color:#333;
+}
+
+/* 🔥 BODY ตัวเดียว วางตรงนี้ */
+body{
+ background: radial-gradient(circle at 20% 20%, #0f172a, #020617);
+ color:var(--text-color);
+ font-family:sans-serif;
+ margin:0;
+ padding:20px;
+ display:flex;
+ justify-content:center;
+ position:relative;
+ overflow-x:hidden;
+}
+
+/* ===== ต่อด้วย CSS อื่นทั้งหมด ===== */
+.layout{
+  display:flex;
+  gap:20px;
+  width:100%;
+  max-width:100%;
+  flex-wrap:wrap;   /* สำคัญมาก */
+}
+
+body::before{
+ pointer-events:none; /* 🔥 กันบังคลิก */
+}
+
+/* LEFT */
+.left-panel{
+  width:320px;
+  flex: 1 1 320px;
+}
+
+.right-panel{
+  flex: 2 1 600px;
+  min-width:300px;
+}
+
+.box{
+ background:var(--panel-bg);
+ border:1px solid var(--border-color);
+ border-radius:8px;
+ padding:10px;
+}
+
+.header-title{
+ text-align:center;
+ font-size:12px;
+ color:#888;
+ margin-bottom:10px;
+}
+
+.bead-scroll-area{
+ height: 270px;   /* 6 × 40px = 240px พอดี */
+ overflow-x:auto;
+ background:#000;
+ border:1px solid #333;
+}
+
+.bead-grid{
+  display:grid;
+  grid-auto-flow:column;
+  gap:4px;
+  padding:5px;
+}
+
+.bead{
+  width:clamp(22px, 3vw, 40px);
+  height:clamp(22px, 3vw, 40px);
+  font-size:12px;
+}
+
+.b-p{background:var(--p-color)}
+.b-b{background:var(--b-color)}
+.b-t{background:var(--t-color);color:#000}
+.b-empty{border-color:#222}
+
+/* STATS */
+.stat-row{
+ display:flex;
+ justify-content:space-around;
+ font-weight:bold;
+}
+
+/* RIGHT */
+.controls{display:flex;gap:10px;justify-content:center}
+
+.btn{
+ padding:10px 20px;
+ border:none;
+ border-radius:6px;
+ cursor:pointer;
+ color:#fff;
+ font-weight:bold;
+}
+
+.btn-p{background:var(--p-color)}
+.btn-b{background:var(--b-color)}
+.btn-t{background:var(--t-color);color:#000}
+
+.patterns-container{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:8px;
+}
+
+..pattern-row{
+  background:#161616;
+  border:1px solid #333;
+  border-radius:6px;
+  padding:8px;
+
+  display:grid;
+
+  /* 🔥 แก้ตรงนี้ */
+  grid-template-columns:90px 1fr 50px 50px;
+
+  align-items:center;
+}
+
+.pred-circle{
+ width:28px;height:28px;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ border:2px solid #555;
+}
+
+/* ===== 🌌 PREMIUM BACKGROUND ===== */
+
+
+body::before{
+ content:"";
+ position:fixed;
+ width:200%;
+ height:200%;
+ background:linear-gradient(45deg,#0ea5e9,#6366f1,#ec4899,#0ea5e9);
+ animation:bgMove 12s linear infinite;
+ opacity:0.08;
+ z-index:0;
+}
+
+@keyframes bgMove{
+ 0%{transform:translate(0,0)}
+ 100%{transform:translate(-50%,-50%)}
+}
+
+/* ===== 🔐 LOGIN ===== */
+#loginScreen{
+ position:fixed;
+ inset:0;
+ background:#000c;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ z-index:999;
+}
+
+.login-card{
+ background:rgba(15,23,42,0.9);
+ padding:25px;
+ border-radius:12px;
+ width:300px;
+ text-align:center;
+ backdrop-filter:blur(10px);
+ box-shadow:0 0 30px #000;
+}
+
+.login-card input{
+ width:100%;
+ padding:10px;
+ margin:5px 0;
+ border-radius:6px;
+ border:none;
+}
+
+.login-card button{
+ width:100%;
+ margin-top:10px;
+ background:#22c55e;
+}
+
+/* ===== HEADER ===== */
+.main-title{
+ text-align:center;
+ font-size:28px;
+ font-weight:800;
+ margin-bottom:15px;
+ letter-spacing:2px;
+ background:linear-gradient(90deg,#0ea5e9,#6366f1,#ec4899);
+ -webkit-background-clip:text;
+ -webkit-text-fill-color:transparent;
+ text-shadow:0 0 20px rgba(14,165,233,0.5);
+}
+
+#app{
+ position:relative;
+ z-index:2;
+}
+
+body::before{
+ z-index:0;
+ pointer-events:none;
+}
+
+/* 🔥 ตัวเทพ กระพริบ */
+.top-pattern{
+ animation: blinkGlow 1s infinite;
+ border:1px solid #ffd700 !important;
+ box-shadow:0 0 10px #ffd700, 0 0 20px #ffd700;
+}
+
+@keyframes blinkGlow{
+ 0%{opacity:1}
+ 50%{opacity:0.4}
+ 100%{opacity:1}
+}
+
+.top-pattern{
+ animation: blinkGlow 1s infinite;
+ border:1px solid #ffd700 !important;
+ box-shadow:0 0 10px #ffd700, 0 0 20px #ffd700;
+}
+
+@keyframes blinkGlow{
+ 0%{opacity:1}
+ 50%{opacity:0.4}
+ 100%{opacity:1}
+}
+
+/* 🔥 QUICK VIEW */
+#quick-view{
+ display:flex;
+ flex-direction:column;
+ gap:6px;
+ margin-top:5px;
+}
+
+.quick-item{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ background:#051f5c;
+ border:1px solid #10d462;
+ border-radius:6px;
+ padding:6px 8px;
+ font-size:12px;
+}
+
+.quick-left{
+ display:flex;
+ align-items:center;
+ gap:6px;
+}
+
+.quick-code{
+ color:#aaa;
+ font-size:11px;
+}
+
+.quick-pred{
+ width:18px;
+ height:18px;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:10px;
+ font-weight:bold;
+}
+
+.quick-p{background:#2196f3;}
+.quick-b{background:#f44336;}
+.quick-t{background:#4caf50;color:#000;}
+
+.quick-pct{
+ font-weight:bold;
+ color:#ffd700;
+}
+
+/* 🔥 กระพริบเฉพาะ Quick View */
+.quick-top{
+ animation: blinkGlow 1s infinite;
+ border:1px solid #ffd700 !important;
+ box-shadow:0 0 10px #ffd700;
+}
+
+
+#expireBox{
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  color: #ffd700;
+  z-index: 9999;
+  border: 1px solid rgba(255,255,255,0.1);
+  font-weight: bold;
+}
+
+#expireBox{
+  display:none;
+}
+
+@media (max-width: 900px){
+  .layout{
+    flex-direction:column;
+  }
+
+  .left-panel{
+    width:100%;
+  }
+
+  .right-panel{
+    width:100%;
+  }
+
+  .patterns-container{
+    grid-template-columns:1fr; /* จาก 2 คอลัมน์ → 1 */
+  }
+}
+
+#trick4{
+ display:flex;
+ flex-direction:column;
+ gap:6px;
+ margin-top:5px;
+}
+
+.trick-row{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ background:#1e293b;
+ border:1px solid #38bdf8;
+ border-radius:6px;
+ padding:6px 8px;
+ font-size:12px;
+}
+
+.trick-box{
+ display:flex;
+ gap:4px;
+}
+
+.trick-cell{
+ width:18px;
+ height:18px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ border-radius:4px;
+ font-size:10px;
+ font-weight:bold;
+}
+
+.trick-p{background:#2196f3;}
+.trick-b{background:#f44336;}
+
+.trick-result{
+ font-weight:bold;
+ color:#ffd700;
+}
+
+
+
+.trick-play-active{
+  animation: activeBlink 0.8s infinite;
+
+  /* 🔥 เรืองแสง */
+  box-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea;
+  border:1px solid #00ffea !important;
+
+  /* 🔥 สีพื้นตอน active */
+  background:#00ffea !important;
+  color:#000 !important;
+}
+
+@keyframes activeBlink{
+  0%{opacity:1; transform:scale(1);}
+  50%{opacity:0.4; transform:scale(1.2);}
+  100%{opacity:1; transform:scale(1);}
+}
+
+
+/* ✅ WIN (ถูก) */
+.dot-win{
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+  color:#fff;
+  box-shadow:0 0 6px rgba(34,197,94,0.7);
+}
+
+/* ❌ LOSE (ผิด) */
+.dot-lose{
+  background:linear-gradient(135deg,#ef4444,#dc2626);
+  color:#fff;
+  box-shadow:0 0 6px rgba(239,68,68,0.7);
+}
+
+/* 🔥 base dot */
+.result-dot{
+  width:14px;
+  height:14px;
+  font-size:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:4px;
+  font-weight:bold;
+  transition:0.2s;
+}
+
+/* ✨ hover effect */
+.result-dot:hover{
+  transform:scale(1.3);
+}
+
+.pat-cell{
+  .pat-cell{
+  display:inline-flex;   /* 👈 แทน inline-block */
+  width:16px;
+  height:16px;
+  align-items:center;
+  justify-content:center;
+  border-radius:4px;
+  font-size:11px;
+  font-weight:bold;
+  margin-right:2px;
+}
+  width:16px;
+  height:16px;
+  text-align:center;
+  line-height:16px;
+  border-radius:4px;
+  font-size:11px;
+  font-weight:bold;
+  margin-right:2px;
+}
+
+/* 🔵 P */
+.pat-p{
+  background:#3b82f6;
+  color:#fff;
+  box-shadow:0 0 6px rgba(59,130,246,0.7);
+}
+
+/* 🔴 B */
+.pat-b{
+  background:#ef4444;
+  color:#fff;
+  box-shadow:0 0 6px rgba(239,68,68,0.7);
+}
+
+.pattern-row > div:first-child{
+  white-space: nowrap;   /* 👈 ห้ามตัดบรรทัด */
+}
+
+/* 🎨 สีกรอบแต่ละ pattern */
+.pattern-row{
+  transition:0.25s;
+}
+
+/* ไล่สี 16 ช่อง */
+.pattern-row:nth-child(1){border:1px solid #3b82f6;}
+.pattern-row:nth-child(2){border:1px solid #22c55e;}
+.pattern-row:nth-child(3){border:1px solid #eab308;}
+.pattern-row:nth-child(4){border:1px solid #ef4444;}
+
+.pattern-row:nth-child(5){border:1px solid #06b6d4;}
+.pattern-row:nth-child(6){border:1px solid #a855f7;}
+.pattern-row:nth-child(7){border:1px solid #f97316;}
+.pattern-row:nth-child(8){border:1px solid #10b981;}
+
+.pattern-row:nth-child(9){border:1px solid #6366f1;}
+.pattern-row:nth-child(10){border:1px solid #84cc16;}
+.pattern-row:nth-child(11){border:1px solid #f43f5e;}
+.pattern-row:nth-child(12){border:1px solid #0ea5e9;}
+
+.pattern-row:nth-child(13){border:1px solid #14b8a6;}
+.pattern-row:nth-child(14){border:1px solid #e11d48;}
+.pattern-row:nth-child(15){border:1px solid #8b5cf6;}
+.pattern-row:nth-child(16){border:1px solid #facc15;}
+
+/* 🔵 P */
+.pred-p{
+  background:#3b82f6;
+  color:#fff;
+  border-color:#3b82f6;
+  box-shadow:0 0 8px rgba(59,130,246,0.7);
+}
+
+/* 🔴 B */
+.pred-b{
+  background:#ef4444;
+  color:#fff;
+  border-color:#ef4444;
+  box-shadow:0 0 8px rgba(239,68,68,0.7);
+}
+
+/* 🟢 T */
+.pred-t{
+  background:#22c55e;
+  color:#000;
+  border-color:#22c55e;
+  box-shadow:0 0 8px rgba(34,197,94,0.7);
+}
+
+/* =========================
+   🔥 TRICK4 RESULT (FINAL)
+   ========================= */
+#trick4-result{
+  display:grid;
+  grid-template-columns: repeat(18, 1fr);
+
+  gap:4px;
+  margin-top:6px;
+
+  width:100%;
+
+  /* 🔥 เพิ่ม 2 ตัวนี้ */
+  grid-auto-rows: auto;
+  align-content: start;
+}
+/* =========================
+   🔥 1 PACK = 1 ช่อง
+   ========================= */
+.trick4-pack{
+  display:flex;
+  gap:2px;
+
+  width:100%;
+  max-width:50px;   /* 🔥 ล็อคให้เท่าช่อง */
+
+  height:26px;
+
+  justify-content:center;
+  align-items:center;
+
+  border-radius:6px;
+  background:#020617;
+  border:1px solid #334155;
+
+  flex-shrink:0;
+}
+
+/* =========================
+   🔥 DOT
+   ========================= */
+.trick4-dot{
+  width:16px;
+  height:16px;
+  border-radius:4px;
+  font-size:11px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-weight:bold;
+}
+
+/* ✅ WIN */
+.trick4-win{
+  background:#22c55e;
+  color:#fff;
+  box-shadow:0 0 6px #22c55e;
+}
+
+/* ❌ LOSE */
+.trick4-lose{
+  background:#ef4444;
+  color:#fff;
+  box-shadow:0 0 6px #ef4444;
+}
+
+
+</style>
+</head>
+
+<body>
+ 
+
+  <!-- 🔐 LOGIN -->
+<div id="loginScreen">
+  <div class="login-card">
+    <h2>LOGIN</h2>
+
+    <input id="user" placeholder="User">
+    <input id="pass" type="password" placeholder="Password">
+
+    <label style="font-size:12px">
+      <input type="checkbox" onclick="togglePass()"> แสดงรหัสผ่าน
+    </label>
+
+    <button onclick="login()">เข้าใช้งาน</button>
+
+    <div id="loginMsg" style="color:red;margin-top:10px"></div>
+  </div>
+</div>
+
+<div id="app" style="display:none">
+
+   <div id="expireBox"></div>   <!-- 🔥 เพิ่มบรรทัดนี้ -->
+
+  <!-- 🔥 TITLE อยู่กึ่งกลางจริง -->
+  <div class="main-title">AI 16 PATTERN SKILL+ทริค 4 ตัว</div>
+
+  <!-- 🔥 layout ครอบทั้งหมด -->
+  <div class="layout">
+
+    <!-- LEFT -->
+    <div class="left-panel">
+
+      <div class="box">
+        <div class="header-title">BEAD ROAD</div>
+        <div class="bead-scroll-area">
+          <div class="bead-grid" id="bead-grid"></div>
+        </div>
+      </div>
+
+      <div class="box">
+  <div class="header-title">🎯 RESULT 4 STEP (WIN / LOSE)</div>
+  <div id="trick4-result"></div>
+</div>
+
+
+      <div class="box">
+        <div class="header-title">TOTAL</div>
+        <div class="stat-row">
+          <span>P: <span id="total-p">0</span></span>
+          <span>B: <span id="total-b">0</span></span>
+          <span>T: <span id="total-t">0</span></span>
+          <span>ALL: <span id="total-all">0</span></span>
+        </div>
+      </div>
+
+    </div>
+
+ <div class="box">
+  <div class="header-title">🔥 TOP 6 AI</div>
+  <div id="quick-view"></div>
+</div>
+
+<div class="box">
+  <div class="header-title"> 4 STEP TRICK</div>
+  <div id="trick4"></div>
+</div>
+
+    <!-- RIGHT -->
+    <div class="right-panel">
+
+      <div class="controls">
+        <button class="btn btn-p" onclick="addResult('P')">P</button>
+        <button class="btn btn-b" onclick="addResult('B')">B</button>
+        <button class="btn btn-t" onclick="addResult('T')">T</button>
+
+        <button class="btn" style="background:#ff9800;color:#000" onclick="undo()">UNDO</button>
+        <button class="btn" style="background:#607d8b" onclick="clearData()">CLEAR</button>
+      </div>
+
+      <div id="patterns-container" class="patterns-container"></div>
+
+    </div>
+
+  </div> <!-- 🔥 ปิด layout -->
+
+</div> <!-- 🔥 ปิด app -->
+
+
+<script>
+
+  // 🔥 วันหมดอายุ
+const EXPIRE_DATE = new Date("2026-05-28");
+
+function renderExpireDate(){
+
+  const el = document.getElementById("expireBox");
+  if(!el) return; // 🔥 กัน null crash
+
+  const d = EXPIRE_DATE.toLocaleDateString("th-TH", {
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
+
+  const now = new Date();
+
+  if(now > EXPIRE_DATE){
+    el.innerHTML = "❌ หมดอายุแล้ว : " + d;
+    el.style.color = "#ff4d4d";
+  }else{
+    el.innerHTML = "⏳ วันหมดอายุ : " + d;
+    el.style.color = "#ffd700";
+  }
+}
+
+
+
+async function login(){
+
+  const userInput = document.getElementById("user");
+  const passInput = document.getElementById("pass");
+
+  const loginBoxEl = document.getElementById("loginScreen"); // 🔥 ใช้ id นี้
+  const appEl = document.getElementById("app");
+  const loginErrEl = document.getElementById("loginMsg"); // 🔥 ใช้ตัวนี้
+
+  loginErrEl.innerText="⏳ กำลังตรวจสอบ...";
+
+  try{
+
+    const res = await fetch(
+      "https://morning-block-55bb.havanalanna.workers.dev/?user="
+      + encodeURIComponent(userInput.value)
+      + "&pass=" + encodeURIComponent(passInput.value)
+    );
+
+    const data = await res.json();
+
+    if(data.status==="ok"){
+      document.getElementById("expireBox").style.display = "block";
+renderExpireDate();
+
+      // ✅ LOGIN ผ่าน
+      loginBoxEl.style.display="none";
+      appEl.style.display="block";
+
+     history = [];
+     patterns = [];
+
+     currentPlay = [];   // ❗ไม่ต้อง let
+      playIndex = 0;
+
+      init();
+      updateUI();
+
+      // 🔒 ตรวจ License ทุก 30 วิ
+      const user = userInput.value;
+      const pass = passInput.value;
+
+      setInterval(async ()=>{
+
+        try{
+          const r = await fetch(
+            "https://morning-block-55bb.havanalanna.workers.dev/?user="
+            + encodeURIComponent(user)
+            + "&pass=" + encodeURIComponent(pass)
+          );
+
+          const j = await r.json();
+
+          if(j.status!=="ok"){
+            alert("⛔ License ถูกปิดใช้งาน");
+            location.reload();
+          }
+
+        }catch(e){
+          console.log("License check error");
+        }
+
+      },30000);
+
+    }else{
+      loginErrEl.innerText="❌ User หรือ Password ไม่ถูกต้อง";
+    }
+
+  }catch(e){
+    loginErrEl.innerText="❌ ไม่สามารถเชื่อมต่อ Server";
+  }
+
+}
+
+
+// 👁 ดูรหัส
+function togglePass(){
+ const p = document.getElementById("pass");
+ p.type = (p.type==="password") ? "text":"password";
+}
+
+
+const PATTERNS=[
+"PPPP","PPPB","PPBP","PPBB",
+"PBPP","PBPB","PBBP","PBBB",
+"BPPP","BPPB","BPBP","BPBB",
+"BBPP","BBPB","BBBP","BBBB"
+];
+
+let trick4Stats = {
+  win: 0,
+  lose: 0
+};
+let history=[];
+let patterns=[];
+
+let trickStep = 0; // 🔥 ตัวนับลำดับแทง
+
+function init(){
+  const box = document.getElementById("patterns-container");
+  box.innerHTML = "";
+  patterns = [];
+
+  PATTERNS.forEach((code,i)=>{
+    const id = i+1;
+
+    patterns.push({
+      id,
+      code,
+      step:0,
+      stats:{p:0,b:0,t:0,total:0,win:0},
+      currentPrediction:null,
+      results:[]
+    });
+
+    const el = document.createElement("div");
+    el.className = "pattern-row";
+
+    el.innerHTML = `
+
+      <div>
+        ${
+          code.split("").map(c=>{
+            let cls = "";
+
+            if(c === "P") cls = "pat-p";
+            else if(c === "B") cls = "pat-b";
+
+            return `<span class="pat-cell ${cls}">${c}</span>`;
+          }).join("")
+        }
+      </div>
+
+      <div id="dots-${id}" style="
+        display:grid;
+        grid-template-columns:repeat(20,14px);
+        gap:2px;
+        max-height:32px;
+      "></div>
+
+      <div id="pct-${id}">0%</div>
+
+      <div class="pred-circle" id="pred-${id}">-</div>
+    `;
+
+    box.appendChild(el);
+  });
+
+  renderBeadRoad();
+
+  // 🔥 FIX: ลบ % trick4 ตอน init (กันค้างจากรอบก่อน)
+  const percentBox = document.getElementById("trick4-percent");
+  if(percentBox) percentBox.remove();
+}
+
+
+
+function recalcAll(){
+
+ // 🔥 reset ก่อน
+ patterns.forEach(p=>{
+  p.step = 0;
+  p.results = [];
+  p.stats = {p:0,b:0,t:0,total:0,win:0};
+  p.currentPrediction = null;
+ });
+
+ // 🔥 LOOP history (อันนี้ห้ามลืมเด็ดขาด)
+ history.forEach(r=>{
+
+  patterns.forEach(p=>{
+
+    const expect = p.code[p.step];
+
+    // 🔥 กรณี T → ข้าม
+   if(r === "T"){
+  p.stats.t++;   // นับเฉยๆ
+  return;        // ❗ ไม่ push ไม่ยุ่ง results
+}
+
+    const isWin = (r === expect);
+
+    p.results.push(isWin ? 'W' : 'L');
+
+    if(isWin) p.stats.win++;
+
+    if(r==="P") p.stats.p++;
+    else if(r==="B") p.stats.b++;
+
+    p.stats.total++;
+
+    // 🔁 เดิน step เฉพาะ P/B
+    p.step = (p.step + 1) % p.code.length;
+
+    // 👉 prediction ถัดไป
+    p.currentPrediction = p.code[p.step];
+
+  });
+
+ });
+
+}
+
+
+
+function addResult(r){
+  history.push(r);
+
+  // 🔥 เช็คเฉพาะ P/B
+  if(r !== "T" && currentPlay.length === 4){
+
+    const predict = currentPlay[playIndex];
+
+    // 🔥 กันกรณี SKIP (ไม่มีตัวแทงจริง)
+    if(!predict) return;
+
+    const isWin = (predict === r);
+
+    addTrickDot(isWin); // 👉 แสดงผลทันที
+
+    playIndex++;
+
+    // 🔁 ครบ 4 ไม้ → reset
+    if(playIndex >= 4){
+      playIndex = 0;
+    }
+  }
+
+  // 🔥 นับ step เดิม
+  if(r !== "T"){
+    trickStep++;
+  }
+
+  recalcAll();
+  updateUI();
+}
+
+
+
+
+function undo(){
+
+ if(history.length === 0) return;
+
+ const last = history[history.length - 1];
+
+ // 🔥 ลบผลทีละตัว
+ if(last !== "T"){
+   removeLastTrickDot();
+
+   playIndex--;
+   if(playIndex < 0) playIndex = 3;
+ }
+
+ history.pop();
+
+ // 🔥 step เดิม
+ if(last !== "T"){
+   trickStep--;
+   if(trickStep < 0) trickStep = 0;
+ }
+
+ recalcAll();
+ updateUI();
+}
+
+
+
+function renderTrick4(){
+
+ const el = document.getElementById("trick4");
+ if(!el) return;
+
+ const noTie = history.filter(x => x !== "T");
+
+ if(noTie.length < 8){
+   el.innerHTML = "WAIT...";
+   return;
+ }
+
+ el.innerHTML = "";
+
+ // 🔥 แบ่งเป็นชุดละ 4
+ const groups = [];
+ for(let i=0;i<noTie.length;i+=4){
+   const g = noTie.slice(i,i+4);
+   if(g.length === 4){
+     groups.push(g);
+   }
+ }
+
+ // 🔥 ต้องมีอย่างน้อย 2 ชุด
+ if(groups.length < 2){
+   el.innerHTML = "WAIT...";
+   return;
+ }
+
+ // 🔥 เทียบทีละคู่
+ for(let i=1;i<groups.length;i++){
+
+   const prev = groups[i-1];
+   const curr = groups[i];
+
+   let same = 0;
+   let diff = 0;
+
+   for(let j=0;j<4;j++){
+     if(prev[j] === curr[j]) same++;
+     else diff++;
+   }
+// =========================
+// ✅ FINAL LOGIC (ของจริง)
+// =========================
+let playMode = null;
+
+// ❌ เท่ากัน → ไม่เล่น
+if(same === diff){
+  playMode = null;
+}
+else if(same < diff){
+  // 👉 เหมือนน้อย → แทงเหมือน
+  playMode = "เหมือน";
+}
+else{
+  // 👉 ต่างน้อย → แทงต่าง
+  playMode = "ต่าง";
+}
+
+  // =========================
+  // ✅ สร้างตัวแทง
+  // =========================
+  let play = [];
+
+  if(playMode === "เหมือน"){
+    play = [...curr];
+  }else{
+    play = curr.map(x => x === "P" ? "B" : "P");
+  }
+
+// 🔥 ⭐ วางตรงนี้ ⭐
+if(i === groups.length - 1){
+
+  if(playMode !== null){
+    currentPlay = [...play];
+  }else{
+    currentPlay = []; // 🔥 เคลียร์ทิ้งเลย (หัวใจหลัก)
+  }
+
+}
+
+// 🔥 ตรวจมังกร
+let dragonText = "";
+
+if(play.join("") === "PPPP"){
+  dragonText = "🐉 มังกร P (ตามแต่ระวัง)";
+}
+else if(play.join("") === "BBBB"){
+  dragonText = "🐉 มังกร B (ตามแต่ระวัง)";
+}
+
+
+  // =========================
+  // ✅ สร้าง UI
+  // =========================
+  const row = document.createElement("div");
+  row.className = "trick-row";
+
+  // 🔥 ⭐ ไฮไลท์บล็อคล่าสุด
+  if(i === groups.length - 1){
+    row.style.border = "1px solid gold";
+    row.style.boxShadow = "0 0 10px gold";
+  }
+
+
+
+   row.innerHTML = `
+     <div class="trick-box">
+       ${prev.map(x=>`<div class="trick-cell trick-${x.toLowerCase()}">${x}</div>`).join("")}
+     </div>
+
+     <div class="trick-result">
+  ${same}ตัวเหมือน / ${diff}ตัวต่าง
+  ${dragonText ? `<div style="color:#ffd700;font-size:11px">${dragonText}</div>` : ""}
+</div>
+
+     <div class="trick-box">
+       ${curr.map(x=>`<div class="trick-cell trick-${x.toLowerCase()}">${x}</div>`).join("")}
+     </div>
+
+     <div class="trick-box">
+<div class="trick-box">
+  ${
+    playMode === null
+    ? `<div style="color:#888">SKIP</div>`
+   : play.map((x,idx)=>{
+
+          const isActive = (idx === (trickStep % 4));
+
+          return `
+            <div class="trick-cell trick-${x.toLowerCase()} ${
+              (i === groups.length - 1 && isActive) ? 'trick-play-active' : ''
+            }">
+              ${x}
+            </div>
+          `;
+
+        }).join("")
+    }
+  </div>
+`;
+
+el.appendChild(row);
+ }
+}
+
+
+// 🔥 ⭐ วางตรงนี้ ⭐
+function addTrickDot(isWin){
+
+  const el = document.getElementById("trick4-result");
+
+  // 🔥 นับสถิติ
+  if(isWin) trick4Stats.win++;
+  else trick4Stats.lose++;
+
+  // 🔥 ถ้ายังไม่มี pack → สร้างใหม่
+  if(!el.lastChild || el.lastChild.children.length >= 4){
+    const pack = document.createElement("div");
+    pack.className = "trick4-pack";
+    el.appendChild(pack);
+  }
+
+  const pack = el.lastChild;
+
+  const d = document.createElement("div");
+  d.className = "trick4-dot";
+
+  d.classList.add(isWin ? "trick4-win" : "trick4-lose");
+  d.innerText = isWin ? "✔" : "✖";
+
+  pack.appendChild(d);
+
+  updateTrick4Percent(); // 🔥 เพิ่มบรรทัดนี้
+}
+
+
+// 🔥 ⭐ วางตรงนี้ ⭐
+function removeLastTrickDot(){
+
+  const el = document.getElementById("trick4-result");
+  if(!el.lastChild) return;
+
+  const pack = el.lastChild;
+if(pack.lastChild){
+
+  if(pack.lastChild.classList.contains("trick4-win")){
+    trick4Stats.win = Math.max(0, trick4Stats.win - 1);
+  }else{
+    trick4Stats.lose = Math.max(0, trick4Stats.lose - 1);
+  }
+
+  pack.removeChild(pack.lastChild);
+}
+
+
+  if(pack.children.length === 0){
+    el.removeChild(pack);
+  }
+
+  updateTrick4Percent(); // 🔥 เพิ่ม
+}
+
+
+// ==============================
+// 🔥 วางตรงนี้เลย (ใต้ removeLastTrickDot)
+// ==============================
+function updateTrick4Percent(){
+
+  const total = trick4Stats.win + trick4Stats.lose;
+
+  let pct = 0;
+  if(total > 0){
+    pct = Math.round((trick4Stats.win / total) * 100);
+  }
+
+  let percentBox = document.getElementById("trick4-percent");
+
+  // 🔥 ถ้ายังไม่มี → สร้าง
+  if(!percentBox){
+    percentBox = document.createElement("div");
+    percentBox.id = "trick4-percent";
+
+    percentBox.style.marginTop = "6px";
+    percentBox.style.fontSize = "12px";
+    percentBox.style.color = "#ffd700";
+    percentBox.style.fontWeight = "bold";
+
+    // 🔥 สำคัญ: ไปอยู่นอก grid
+    const parent = document.getElementById("trick4-result").parentElement;
+    parent.appendChild(percentBox);
+  }
+
+  percentBox.innerText =
+    `WIN ${trick4Stats.win} / LOSE ${trick4Stats.lose} (${pct}%)`;
+}
+
+
+
+
+function renderTrick4Result(){
+
+  const el = document.getElementById("trick4-result");
+  if(!el) return;
+
+  el.innerHTML = "";
+
+  const noTie = history.filter(x => x !== "T");
+
+  if(noTie.length < 5){
+    el.innerHTML = "<span style='color:#666'>WAIT...</span>";
+    return;
+  }
+
+  // 🔥 แบ่งชุด 4
+  const groups = [];
+  for(let i=0;i<noTie.length;i+=4){
+    const g = noTie.slice(i,i+4);
+    if(g.length === 4) groups.push(g);
+  }
+
+  if(groups.length < 1) return;
+
+  // 🔥 loop ทุกชุด
+  for(let i=1;i<groups.length;i++){
+
+    const prev = groups[i-1];
+    const curr = groups[i];
+
+    let same = 0;
+
+    for(let j=0;j<4;j++){
+      if(prev[j] === curr[j]) same++;
+    }
+
+    const diff = 4 - same;
+
+    let playMode = null;
+
+    if(same === diff) continue;
+    else if(same < diff) playMode = "same";
+    else playMode = "diff";
+
+    let play = [];
+
+    if(playMode === "same"){
+      play = [...curr];
+    }else{
+      play = curr.map(x => x === "P" ? "B" : "P");
+    }
+
+    // 🔥 เอาผลจริง "ปัจจุบัน" มาเทียบทีละตัว
+    const startIndex = i * 4;
+
+    const pack = document.createElement("div");
+    pack.className = "trick4-pack";
+
+    for(let j=0;j<4;j++){
+
+      const real = noTie[startIndex + j]; // 🔥 ทีละไม้
+      if(!real) break;
+
+      const d = document.createElement("div");
+      d.className = "trick4-dot";
+
+      const isWin = (play[j] === real);
+
+      d.classList.add(isWin ? "trick4-win" : "trick4-lose");
+      d.innerText = isWin ? "✔" : "✖";
+
+      pack.appendChild(d);
+    }
+
+    el.appendChild(pack);
+  }
+}
+
+
+function updateUI(){
+
+ const total = history.length;
+ const p = history.filter(x=>x==="P").length;
+ const b = history.filter(x=>x==="B").length;
+ const t = history.filter(x=>x==="T").length;
+
+ document.getElementById("total-p").innerText = p;
+ document.getElementById("total-b").innerText = b;
+ document.getElementById("total-t").innerText = t;
+ document.getElementById("total-all").innerText = total;
+
+renderBeadRoad();
+
+// 🔥 STEP 1: หา % สูงสุด
+let maxPct = 0;
+
+patterns.forEach(p=>{
+ const pct = p.stats.total
+   ? Math.round((p.stats.win/p.stats.total)*100)
+   : 0;
+
+ if(pct > maxPct) maxPct = pct;
+});
+
+// 🔥 STEP 2: render + ใส่ effect
+patterns.forEach(pat=>{
+
+  const pct = pat.stats.total
+   ? Math.round((pat.stats.win/pat.stats.total)*100)
+   : 0;
+
+  // 👉 ดึงแถว
+  const row = document.getElementById(`pct-${pat.id}`).parentElement;
+
+  // 🔥 ล้างก่อน
+  row.classList.remove("top-pattern");
+
+  // 🔥 ถ้า % สูงสุด → กระพริบ
+  if(pct === maxPct && pct > 0){
+    row.classList.add("top-pattern");
+  }
+
+  document.getElementById(`pct-${pat.id}`).innerText = pct+"%";
+const predEl = document.getElementById(`pred-${pat.id}`);
+
+// 🔥 reset class ก่อน
+predEl.classList.remove("pred-p","pred-b","pred-t");
+
+// 🔥 ใส่ค่า
+predEl.innerText = pat.currentPrediction || "-";
+
+// 🔥 ใส่สีตามค่า
+if(pat.currentPrediction === "P"){
+  predEl.classList.add("pred-p");
+}
+else if(pat.currentPrediction === "B"){
+  predEl.classList.add("pred-b");
+}
+else if(pat.currentPrediction === "T"){
+  predEl.classList.add("pred-t");
+}
+
+
+// ==========================
+// 🔥 DOT RESULT (ของเดิม)
+// ==========================
+const dots = document.getElementById(`dots-${pat.id}`);
+dots.innerHTML = "";
+
+pat.results.forEach(r=>{
+  const d = document.createElement("div");
+
+  // 🔥 base style
+  d.className = "result-dot";
+
+  if(r === "W"){
+    d.classList.add("dot-win");
+    d.innerText = "✔";
+
+  }else if(r === "L"){
+    d.classList.add("dot-lose");
+    d.innerText = "✖";
+  }
+
+  dots.appendChild(d);
+});
+
+// 🔥 auto scroll
+dots.scrollLeft = dots.scrollWidth;
+
+ });
+
+ // ✅ วางตรงนี้เลย
+renderQuickView();
+renderTrick4();
+//renderTrick4Result();
+updateTrick4Percent();
+
+}
+
+function renderQuickView(){
+
+ const box = document.getElementById("quick-view");
+
+ // 🔥 ซ่อน/แสดง
+ const boxWrap = box.parentElement;
+ if(history.length === 0){
+   boxWrap.style.display = "none";
+   return;
+ }else{
+   boxWrap.style.display = "block";
+ }
+
+ box.innerHTML = "";
+
+ // 🔥 หา % สูงสุด
+ let maxPct = 0;
+ patterns.forEach(p=>{
+   const pct = p.stats.total
+     ? Math.round((p.stats.win/p.stats.total)*100)
+     : 0;
+   if(pct > maxPct) maxPct = pct;
+ });
+
+ // 🔥 sort
+ const sorted = [...patterns].sort((a,b)=>{
+   const pctA = a.stats.total ? (a.stats.win/a.stats.total) : 0;
+   const pctB = b.stats.total ? (b.stats.win/b.stats.total) : 0;
+   return pctB - pctA;
+ });
+
+ const top6 = sorted.slice(0,6);
+
+ top6.forEach(p=>{
+   const pct = p.stats.total
+     ? Math.round((p.stats.win/p.stats.total)*100)
+     : 0;
+
+   const div = document.createElement("div");
+   div.className = "quick-item";
+
+   // 🔥 กระพริบตัว Top
+   if(pct === maxPct && pct > 0){
+     div.classList.add("quick-top");
+   }
+
+   let colorClass = "";
+   if(p.currentPrediction === "P") colorClass = "quick-p";
+   else if(p.currentPrediction === "B") colorClass = "quick-b";
+   else colorClass = "quick-t";
+
+   div.innerHTML = `
+     <div class="quick-left">
+       <div class="quick-pred ${colorClass}">
+         ${p.currentPrediction || "-"}
+       </div>
+       <div class="quick-code">${p.code}</div>
+     </div>
+
+     <div class="quick-pct">${pct}%</div>
+   `;
+
+   box.appendChild(div);
+ });
+}
+
+
+
+function clearData(){
+
+  if(!confirm("ล้างข้อมูลทั้งหมด?")) return;
+
+  // 🔥 1. reset history + step
+  history = [];
+  trickStep = 0;
+
+  // 🔥 2. reset trick4 stats
+  trick4Stats = { win:0, lose:0 };
+
+  // 🔥 3. ล้าง UI จุดผล
+  document.getElementById("trick4-result").innerHTML = "";
+
+  // 🔥 3.1 ลบ % ออกด้วย (สำคัญมาก)
+  const percentBox = document.getElementById("trick4-percent");
+  if(percentBox) percentBox.remove();
+
+  // 🔥 4. reset play
+  currentPlay = [];
+  playIndex = 0;
+
+  recalcAll();
+  updateUI();
+}
+
+
+
+
+function renderBeadRoad(){
+  const grid = document.getElementById("bead-grid");
+  grid.innerHTML = "";
+
+  const rows = 6;
+
+  // 🔥 จำนวนคอลัมน์ = จำนวนข้อมูล / 6
+  const cols = Math.ceil(history.length / rows) || 1;
+
+  grid.style.gridTemplateRows = `repeat(${rows}, 40px)`;
+  grid.style.gridAutoFlow = "column"; // 🔥 สำคัญมาก
+  grid.style.gridTemplateColumns = `repeat(${cols}, 40px)`;
+
+  // เติมช่องว่างทั้งหมด
+  for(let i = 0; i < rows * cols; i++){
+
+    const d = document.createElement("div");
+    d.className = "bead";
+
+    if(i < history.length){
+
+      const v = history[i];
+
+      if(v === "P") d.classList.add("b-p");
+      if(v === "B") d.classList.add("b-b");
+      if(v === "T") d.classList.add("b-t");
+
+      d.innerText = v;
+
+    } else {
+      d.classList.add("b-empty");
+    }
+
+    grid.appendChild(d);
+  }
+}
+
+init();
+updateUI();
+
+
+</script>
+
+</body>
+</html>
